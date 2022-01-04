@@ -13,8 +13,10 @@ class AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
     if @album.save
+      flash[:notice] = "Checkmate dingus!"
       redirect_to albums_path
     else
+      flash[:alert] = "Album unsuccessfully added, you idiot!"
       render :new
     end
   end

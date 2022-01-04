@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="jumbotron">
+        <h1><a href="/">Record Swag</a>
+        <%= image_tag "kernal.png" %></h1>
+      </div>
+
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

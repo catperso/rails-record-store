@@ -1,3 +1,12 @@
+<% if @album.errors.any? %>
+  <h3>YOU GOT ERRORZ MATE:</h3>
+  <ul>
+    <% @album.errors.full_messages.each do |message| %>
+      <li><%= message %> you numbskull</li>
+    <% end %>
+  </ul>
+<% end %>
+
 <h1>New album</h1>
 
 <%= form_for @album do |f| %>

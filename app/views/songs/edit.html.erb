@@ -1,3 +1,12 @@
+<% if @song.errors.any? %>
+  <h3>YOU GOT ERRORZ MATE:</h3>
+  <ul>
+    <% @song.errors.full_messages.each do |message| %>
+      <li><%= message %> you numbskull</li>
+    <% end %>
+  </ul>
+<% end %>
+
 <h1>Edit song:</h1>
 
 <%= form_for [@album, @song] do |f| %>

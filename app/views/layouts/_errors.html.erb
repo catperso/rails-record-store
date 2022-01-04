@@ -1,0 +1,8 @@
+<% if object.errors.any? %>
+  <h3>YA GOT ERRORZ DONKEY BRAIN:</h3>
+  <ul>
+    <% object.errors.full_messages.each do |message| %>
+      <li><%= message %> you numbskull</li>
+    <% end %>
+  </ul>
+<% end %>
